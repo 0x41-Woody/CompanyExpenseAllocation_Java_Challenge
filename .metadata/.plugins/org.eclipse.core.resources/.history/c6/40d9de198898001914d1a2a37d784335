@@ -1,0 +1,36 @@
+package tek.main.util;
+
+import java.math.BigDecimal;
+
+import tek.main.model.Department;
+import tek.main.model.Employee;
+
+public class ExpenseCalculation {
+	
+	/**
+	 * Recursively sums up the total Expense Allocation for the
+	 * <i>Employee</i>, and all their reporting Employee(s)
+	 * 
+	 * @param employee
+	 * @return BigDecimal
+	 */
+	public static BigDecimal sumExpenseAllocations(Employee employee) {
+		BigDecimal total = employee.getExpenseAllocation();
+		for (Employee reportingEmployee : employee.getReportingEmployees()) {
+			//Recursive Call
+			total = total.add(sumExpenseAllocations(reportingEmployee));
+		}
+		return total;
+	}
+	
+	/**
+	 * Sums up the total Expense Allocation for the <i>Department</i>
+	 * 
+	 * @param department
+	 * @return BigDecimal
+	 */
+	public static BigDecimal sumExpenseAllocations(Department department) {
+		return sumExpenseAllocations(department.getManager());
+	}
+
+}

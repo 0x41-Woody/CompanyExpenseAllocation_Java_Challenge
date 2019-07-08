@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MainTest" project="CompanyExpenseAllocation" tests="14" started="14" failures="1" errors="0" ignored="0">
+  <testsuite name="tek.test.MainTest" time="0.0" displayname="MainTest" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]">
+    <testcase name="exampleOrganizationScenario" classname="tek.test.MainTest" time="0.0" displayname="exampleOrganizationScenario" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:exampleOrganizationScenario(tek.test.MainTest)]"/>
+    <testcase name="managersNoSelfManageCheck" classname="tek.test.MainTest" time="0.0" displayname="managersNoSelfManageCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managersNoSelfManageCheck(tek.test.MainTest)]"/>
+    <testcase name="managerCExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="managerCExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managerCExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="managersCanHaveQATesterDeveloperManagerCheck" classname="tek.test.MainTest" time="0.0" displayname="managersCanHaveQATesterDeveloperManagerCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managersCanHaveQATesterDeveloperManagerCheck(tek.test.MainTest)]"/>
+    <testcase name="developerExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="developerExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:developerExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="qaTesterExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="qaTesterExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:qaTesterExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="managerExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="managerExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managerExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="managerDExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="managerDExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managerDExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="qaTestersNoReportingEmployeeCheck" classname="tek.test.MainTest" time="0.0" displayname="qaTestersNoReportingEmployeeCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:qaTestersNoReportingEmployeeCheck(tek.test.MainTest)]"/>
+    <testcase name="managerAExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="managerAExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managerAExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="noManagersWithReportingEmployeeList" classname="tek.test.MainTest" time="0.0" displayname="noManagersWithReportingEmployeeList" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:noManagersWithReportingEmployeeList(tek.test.MainTest)]">
+      <failure>java.lang.AssertionError: expected:&lt;[tek.main.model.Manager@52f759d7]&gt; but was:&lt;[tek.main.model.Manager@43bd930a]&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:834)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at tek.test.MainTest.noManagersWithReportingEmployeeList(MainTest.java:337)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)&#13;
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)&#13;
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.Iterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="developersNoReportingEmployeeCheck" classname="tek.test.MainTest" time="0.0" displayname="developersNoReportingEmployeeCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:developersNoReportingEmployeeCheck(tek.test.MainTest)]"/>
+    <testcase name="managerEExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="managerEExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managerEExpenseAllocationCheck(tek.test.MainTest)]"/>
+    <testcase name="managerBExpenseAllocationCheck" classname="tek.test.MainTest" time="0.0" displayname="managerBExpenseAllocationCheck" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:managerBExpenseAllocationCheck(tek.test.MainTest)]"/>
+  </testsuite>
+</testrun>

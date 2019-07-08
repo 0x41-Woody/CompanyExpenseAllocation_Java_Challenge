@@ -1,0 +1,179 @@
+package tek.test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.math.BigDecimal;
+import java.util.Set;
+
+import org.junit.Test;
+
+import tek.main.model.Department;
+import tek.main.model.Developer;
+import tek.main.model.Employee;
+import tek.main.model.Manager;
+import tek.main.model.Organization;
+import tek.main.model.QATester;
+
+public class MainTest {
+
+	/**
+	 * UseCase: Developers warrant an allocation of $2000 each.
+	 */
+	@Test
+	public void developerExpenseAllocationCheck() {
+
+		//expected
+		BigDecimal expectedAllocation = new BigDecimal(2000);
+
+		//setup
+		Employee qaTester = new Developer();
+
+		//assertion
+		assertTrue(qaTester instanceof Developer);
+		assertEquals(expectedAllocation, qaTester.getExpenseAllocation());
+	}
+	
+	/**
+	 * UseCase: QATesters warrant an allocation of $1000 each.
+	 */
+	@Test
+	public void qaTesterExpenseAllocationCheck() {
+
+		//expected
+		BigDecimal expectedAllocation = new BigDecimal(1000);
+
+		//setup
+		Employee qaTester = new QATester();
+
+		//assertion
+		assertTrue(qaTester instanceof QATester);
+		assertEquals(expectedAllocation, qaTester.getExpenseAllocation());
+	}
+	
+	/**
+	 * UseCase: Managers warrant an allocation of $600 each.
+	 */
+	@Test
+	public void managerExpenseAllocationCheck() {
+
+		//expected
+		BigDecimal expectedAllocation = new BigDecimal(600);
+
+		//setup
+		Employee qaTester = new Manager();
+
+		//assertion
+		assertTrue(qaTester instanceof Manager);
+		assertEquals(expectedAllocation, qaTester.getExpenseAllocation());
+	
+	}
+	
+	/**
+	 * UseCase: Managers can have QA Testers, Developers,
+	 * and other managers report to them.
+	 */
+	@Test
+	public void managersCanHaveQATesterDeveloperManagerCheck() {
+
+		//expected
+		Employee manager = new Manager();
+		Employee developer = new Developer();
+		Employee qaTester = new QATester();
+
+		//setup
+		Employee headManager = new Manager();
+		headManager.addReportingEmployee(manager);
+		headManager.addReportingEmployee(developer);
+		headManager.addReportingEmployee(qaTester);
+		Set<Employee> reportingEmployees = headManager.getReportingEmployees();
+
+		//assertion
+		assertTrue(reportingEmployees.contains(manager));
+		assertTrue(reportingEmployees.contains(developer));
+		assertTrue(reportingEmployees.contains(qaTester));
+	}
+	
+	/**
+	 * UserCase (Implied): QA Testers cannot have reports.
+	 */
+	@Test(expected = IllegalStateException.class)
+	public void qaTestersNoReportingEmployeeCheck() {
+		
+		//expected (IllegalStateException)
+		
+		//setup
+		Employee qaTester = new QATester();
+		Employee developer = new Developer();
+		qaTester.addReportingEmployee(developer);
+
+		//assertion (expect IllegalStateException)
+	}
+	
+	/**
+	 * UserCase (Implied): Developers cannot have reportingEmployees.
+	 */
+	@Test(expected = IllegalStateException.class)
+	public void developersNoReportingEmployeeCheck() {
+		
+		//expected (IllegalStateException)
+		
+		//setup
+		Employee developer = new Developer();
+		Employee qaTester = new QATester();
+		developer.addReportingEmployee(qaTester);
+
+		//assertion (expect IllegalStateException)
+	}
+	
+	
+	
+	
+	
+	public void exampleScenario() {
+		
+		/**
+		 * For the given hierarchy:
+		 * A. Manager A
+		 *    I. Manager B
+		 *       1. Developer A
+		 *       2. QATester A
+		 *       
+		 * B. Manager C
+		 *    I. Manager D
+		 *    
+		 * C. Manager E
+		 *    I. Developer B
+		 */
+		
+		//Establish all the employees
+		Manager managerA = new Manager();
+		Manager managerB = new Manager();
+		Manager managerC = new Manager();
+		Manager managerD = new Manager();
+		Manager managerE = new Manager();
+		Employee developerA = new Developer();
+		Employee developerB = new Developer();
+		Employee qaTesterA = new QATester();
+
+		//Set up reporting employee hierarchy
+		managerA.addReportingEmployee(managerB);
+		managerB.addReportingEmployee(developerA);
+		managerB.addReportingEmployee(qaTesterA);
+		managerC.addReportingEmployee(managerD);
+		managerE.addReportingEmployee(developerB);
+		
+		//Establish Departments, with head managers
+		Department departmentA = new Department(managerA);
+		Department departmentB = new Department(managerC);
+		Department departmentC = new Department(managerE);
+		
+		//Establish organization & add Departments
+		Organization organization = new Organization();
+		organization.addDepartment(departmentA);
+		organization.addDepartment(departmentB);
+		organization.addDepartment(departmentC);
+		
+		
+	}
+}

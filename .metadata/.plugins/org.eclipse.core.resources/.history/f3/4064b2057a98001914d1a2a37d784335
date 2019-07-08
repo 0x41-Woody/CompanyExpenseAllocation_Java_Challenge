@@ -1,0 +1,48 @@
+package tek.test;
+
+import tek.main.model.Developer;
+import tek.main.model.Employee;
+import tek.main.model.Manager;
+import tek.main.model.QATester;
+
+public class MainTest {
+
+	public void exampleScenario() {
+		
+		/**
+		 * For the given hierarchy:
+		 * A. Manager A
+		 *    I. Manager B
+		 *       1. Developer A
+		 *       2. QATester A
+		 *       
+		 * B. Manager C
+		 *    I. Manager D
+		 *    
+		 * C. Manager E
+		 *    I. Developer B
+		 */
+		public static Employee createDepartmentA() {
+			Employee managerA = new Manager();
+			Employee managerB = new Manager();
+			Employee developerA = new Developer();
+			Employee qaTesterA = new QATester();
+			managerA.addReportingEmployee(managerB);
+			managerB.addReportingEmployee(developerA);
+			managerB.addReportingEmployee(qaTesterA);
+			
+			return managerA;
+		}
+
+		
+		Employee managerC = new Manager();
+		Employee managerD = new Manager();
+		
+		
+		Employee managerE = new Manager();
+		Employee developerB = new Developer();
+		
+		
+		
+	}
+}

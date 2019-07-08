@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculateTestCase" project="code-challenge" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.aaronhible.codechallenge.calculation.CalculateTestCase" time="0.095">
+    <testcase name="exampleScenario" classname="com.aaronhible.codechallenge.calculation.CalculateTestCase" time="0.092"/>
+    <testcase name="sumOrganizationAllocations" classname="com.aaronhible.codechallenge.calculation.CalculateTestCase" time="0.001"/>
+    <testcase name="sumOperationsDepartmentAllocations" classname="com.aaronhible.codechallenge.calculation.CalculateTestCase" time="0.001"/>
+    <testcase name="sumRockStartDepartmentAllocations" classname="com.aaronhible.codechallenge.calculation.CalculateTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

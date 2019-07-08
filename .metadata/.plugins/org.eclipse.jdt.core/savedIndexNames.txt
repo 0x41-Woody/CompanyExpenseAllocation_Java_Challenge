@@ -1,0 +1,14 @@
+INDEX VERSION 1.131+C:\Users\Addison\Workspaces\TEKSystems_Workspace\.metadata\.plugins\org.eclipse.jdt.core
+2584490635.index
+543635290.index
+1017234753.index
+2259841385.index
+2837077276.index
+3915813304.index
+1895884247.index
+639800598.index
+3018804838.index
+1906819369.index
+4013155646.index
+4046613703.index
+772927604.index

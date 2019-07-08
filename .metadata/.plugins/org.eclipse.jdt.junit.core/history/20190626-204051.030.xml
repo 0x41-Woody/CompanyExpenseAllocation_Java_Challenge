@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MainTest" project="CompanyExpenseAllocation" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="tek.test.MainTest" time="0.0" displayname="MainTest" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]">
+    <testcase name="qaTesterTestersWarrantAllocation" classname="tek.test.MainTest" time="0.0" displayname="qaTesterTestersWarrantAllocation" uniqueid="[engine:junit-vintage]/[runner:tek.test.MainTest]/[test:qaTesterTestersWarrantAllocation(tek.test.MainTest)]"/>
+  </testsuite>
+</testrun>

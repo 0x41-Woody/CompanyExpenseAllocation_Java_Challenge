@@ -1,0 +1,27 @@
+package tek.test;
+
+import tek.main.model.Employee;
+import tek.main.model.Manager;
+
+public class MainTest {
+
+	public void exampleScenario() {
+		
+		/**
+		 * For the given hierarchy:
+		 * I. Manager A
+		 *    A. Manager
+		 *       1. Developer
+		 *       2. QATester
+		 *       
+		 * II. Manager C
+		 *    A. Manager D
+		 *    
+		 * III. Manager E
+		 *    A. Developer
+		 */
+		Employee managerA = new Manager();
+		
+		
+	}
+}

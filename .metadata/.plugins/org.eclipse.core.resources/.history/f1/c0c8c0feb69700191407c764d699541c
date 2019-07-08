@@ -1,0 +1,8 @@
+package model;
+
+import java.util.HashSet;
+
+public class Employee {
+	
+	protected Set<Employee> reports = new HashSet<Employee>();
+}
